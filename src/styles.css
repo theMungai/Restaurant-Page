@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
 }
 
 body{
@@ -113,4 +113,89 @@ nav button:nth-child(4):focus~span{
     height: 100vh;
     background-color: #ffffff;
     color: black;
+    padding:50px 100px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 3rem;
+}
+
+.menu-container .menu-sub-section{
+    height: auto;
+    background-color: black;
+    color: #ffffff;
+    flex-basis: 48%;
+    border-radius: 4px;
+    box-shadow: 20px 20px 20px rgba(0,0,0,0.4);
+    overflow: auto;
+    overflow-y: scroll;
+}
+
+
+.menu-container .menu-header{
+    display: grid;
+    place-content: center;
+}
+
+.menu-container .menu-header h1{
+    color: orange;
+    font-weight: 400;
+    font-size: 4rem;
+}
+
+.menu-sub-section .hotel-menu-header{
+    margin: 40px 0px;
+    text-align: center;
+    background-color: orange;
+    color: black;
+}
+
+.meals-information .meal-details-section{
+    margin: 40px 0px;
+}
+
+.name-of-the-meal{
+    padding-bottom: 20px;
+}
+
+.name-of-the-meal,
+.meals-price{
+    color: orange;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.meal-details .meals-information{
+    flex-basis: 70%;
+}
+
+.menu-items .menu-meals{
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+    padding: 30px 20px;
+}
+
+.menu-meals .meal-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 70%;
+}
+
+.menu-meals .image-container{
+    flex-basis: 30%;
+}
+
+.menu-meals img{
+    width: 150px;
+}
+
+.meals-information h1{
+    width: 60%;
+    background-color: #ffffff;
+    color: black;
+    font-family: "Permanent Marker", serif;
+    font-weight: 400;
+    padding: 0px 20px;
+    margin: 30px 0px;
 }
