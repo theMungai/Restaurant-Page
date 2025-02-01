@@ -1,6 +1,7 @@
 const menuContainer = document.querySelector("#content");
 const menuButton = document.querySelector(".menu-btn");
 
+menuPage()
 menuButton.addEventListener("click", () => {
     menuPage()
 })
