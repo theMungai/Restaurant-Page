@@ -15,4 +15,4 @@ function homePage(){
 
     heroContainer.innerHTML = heroHTML
 }
-homePage()
+// homePage()
