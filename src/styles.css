@@ -16,7 +16,7 @@ body{
 
 /* Styling Scrollbar for the whole page */
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
     height: 10%; 
 }
 
@@ -26,12 +26,12 @@ body{
 }
 
 ::-webkit-scrollbar-thumb {
-    background: orange; 
+    background: rgb(180, 119, 6); 
     border-radius: 10px; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(180, 119, 6); 
+    background: orange; 
 }
 
 ::-webkit-scrollbar-button {
@@ -172,6 +172,13 @@ nav button:nth-child(4):focus~span{
     background-color: orange;
     color: black;
 }
+
+/* Styling Scrollbar for the menu */
+.menu-sub-section::-webkit-scrollbar {
+    width: 4px;
+    height: 10%; 
+}
+
 
 .meals-information .meal-details-section{
     margin: 40px 0px;
