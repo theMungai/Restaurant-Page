@@ -22,7 +22,7 @@ function homePage(){
 
     heroContainer.innerHTML = heroHTML
 }
-// homePage()
+homePage()
 
 document.querySelector(".hero-menu-btn").addEventListener("click", () => {
     menuPage()
