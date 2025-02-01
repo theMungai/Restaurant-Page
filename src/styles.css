@@ -289,4 +289,18 @@ nav button:nth-child(4):focus~span{
     font-size: 4rem;
 }
 
+.about-us-container .about-us-passage{
+    width: 60%;
+    margin: 80px auto;
+    color: rgba(44, 44, 44, 0.863);
+}
 
+.about-us-container .about-us-passage h1{
+    text-align: center;
+    font-size: 4rem;
+}
+
+.about-us-container .about-us-passage p{
+    line-height: 2;
+    padding-bottom: 50px;
+}

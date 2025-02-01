@@ -1,14 +1,11 @@
 const menuContainer = document.querySelector("#content");
-const menuButton = document.querySelectorAll(".menu-btn");
+const menuButton = document.querySelector(".menu-btn");
 
-menuButton.forEach((button) => {
-    button.addEventListener("click", () => {
-        menuPage()
-    })
+menuButton.addEventListener("click", () => {
+    menuPage()
 })
 
-
-function menuPage(){
+export function menuPage(){
     menuContainer.innerHTML = ""
 
     let menuHTML = `
