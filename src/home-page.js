@@ -10,6 +10,11 @@ function homePage(){
         <div class="hero-text">
             <h1>Welcome to Luxury Hotel</h1>
             <p>A luxurious intimate escape where plush interiors and serene ambiance await. Perfect for those who want to feel wrapped in comfort.</p>
+
+            <button class = "hero-menu-btn menu-btn">
+                Our Menu 
+                <img src="/src/images/arrow-right.png" alt="">
+            </button>
         </div>
     `;
 
