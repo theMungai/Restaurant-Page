@@ -1,3 +1,5 @@
+import { menuPage } from "./menu.js";
+
 const heroContainer = document.querySelector("#content");
 const homeButton = document.querySelector(".home-btn");
 
@@ -21,3 +23,7 @@ function homePage(){
     heroContainer.innerHTML = heroHTML
 }
 // homePage()
+
+document.querySelector(".hero-menu-btn").addEventListener("click", () => {
+    menuPage()
+})
