@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
 }
 
 body{
@@ -137,6 +137,33 @@ nav button:nth-child(4):focus~span{
     transform: translate(-50%);
 }
 
+.hero-menu-btn{
+    background-color: orange;
+    color: black;
+    padding: 15px 18px;
+    margin: 30px auto;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.hero-menu-btn img{
+    margin-left: 10px;
+    transition: 0.6s;
+}
+
+.hero-menu-btn:hover{
+    transform: scale(1.05);
+    img{
+        transform: translateX(15px);
+    }
+}
+
 /* ========================== Menu Section ==================================== */
 
 .menu-container{
@@ -261,4 +288,5 @@ nav button:nth-child(4):focus~span{
 .about-us-container .about-heading-and-image h1{
     font-size: 4rem;
 }
+
 
