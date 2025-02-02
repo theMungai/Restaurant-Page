@@ -437,3 +437,7 @@ nav button:nth-child(4):focus~span{
 .submit-button{
     margin: 30px 0px;
 }
+
+#result{
+    color: green;
+}
