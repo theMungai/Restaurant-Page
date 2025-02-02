@@ -5,7 +5,7 @@ contactButton.addEventListener("click", () => {
     contactPage()
 })
 
-function contactPage(){
+export function contactPage(){
     let contactHTML = `
         <div class="contact-us-container">
             <div class="contact-us">
