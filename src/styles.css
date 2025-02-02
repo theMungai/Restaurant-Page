@@ -276,7 +276,7 @@ nav button:nth-child(4):focus~span{
 }
 
 .meals-information h1{
-    width: 60%;
+    width: 300px;
     background-color: #ffffff;
     color: black;
     font-family: "Permanent Marker", serif;
@@ -546,7 +546,7 @@ nav button:nth-child(4):focus~span{
     }
 
     .meals-information h1{
-        width: 70%;
+        width: 250px;
         margin: 20px 0px;
     }
 
@@ -717,7 +717,7 @@ nav button:nth-child(4):focus~span{
     }
 
     .meals-information h1{
-        width: 70%;
+        width: 250px;
         margin: 20px 0px;
     }
 
@@ -889,7 +889,165 @@ nav button:nth-child(4):focus~span{
     }
 
     .meals-information h1{
-        width: 70%;
+        width: 250px;
+        margin: 20px 0px;
+    }
+
+
+    /* =============================== About Us ===================== */
+    .about-us-container .about-heading-and-image{
+        height: 40%;        
+    }
+
+    .about-us-container .about-heading-and-image h1{
+        font-size: 3rem;
+    }
+
+    .about-us-container .about-us-passage{
+        width: 80%;
+        padding: 20px;
+        margin: 50px auto;
+    }
+
+    .about-us-container .about-us-passage h1{
+        font-size: 3rem;
+    }
+
+    .about-us-container .about-us-passage p{
+        font-size: 1rem;
+        line-height: 1.8;
+        padding-bottom: 50px;
+    }
+
+
+    /* ===================== Contact Us Section ========================== */
+    .contact-us-container{
+        display: block;
+        padding: 20px;
+        height: auto;
+    }
+
+    .contact-us{
+        width: 80%;
+        height: auto;
+        margin: 60px auto;
+    }
+
+    .contact-us h1{
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-info-send-message-container{
+        display: block;
+    }
+
+
+    .send-us-message-heading{
+        font-size: 1.1rem;
+    }
+
+    .our-contacts .contact-type{
+        column-gap: 1rem;
+    }
+
+    .write-a-message form textarea{
+        min-height: 100px;
+    }
+}
+
+
+/* ============================ Tablet Landscape ======================== */
+@media (min-width : 992px) and (max-width : 1399px){
+/* ======================================== Header Section =================================== */
+
+    header nav span{
+        width: 110px;
+    }
+
+    nav button:nth-child(2):focus~span{
+        left: 29%;
+    }
+
+    nav button:nth-child(3):focus~span{
+        left:59%;
+    }
+
+    nav button:nth-child(4):focus~span{
+        left: 89%;
+    }
+
+    /* ============================== Hero Page ======================================== */
+    .hero-text{
+        width: 100%;
+    }
+
+    .hero-text h1{
+        font-size: 3.5rem;
+    }
+
+    .hero-text p {
+        width: 80%;
+        padding: 20px 30px;
+    }
+
+    /* ========================== Menu Section ==================================== */
+    .menu-container{
+        padding:20px 0px;
+        display: block;
+    }
+
+    .menu-container .menu-sub-section{
+        margin: 30px auto;
+        width:80%;
+        border-radius: 4px;
+        box-shadow:none;
+        overflow: hidden;
+    }
+
+    .menu-container .menu-header{
+        display: none;
+    }
+
+    .menu-sub-section .hotel-menu-header{
+        padding: 20px;
+        margin: 20px 0px;
+        font-size: 2rem;
+    }
+
+    .meals-information .meal-details-section{
+        margin: 40px 0px;
+    }
+
+    .name-of-the-meal,
+    .meals-price{
+        font-size: 1.1rem;
+    }
+
+    .meal-details .meals-information{
+        flex-basis: 80%;
+    }
+
+    .menu-items .menu-meals{
+        display: block;
+        padding: 30px 20px;
+    }
+
+    .menu-meals .meal-details{
+        display: block;
+        width: 100%;
+    }
+
+    .menu-meals .image-container{
+        width: 200px;
+    }
+
+    .menu-meals img{
+        width: 60%;
+    }
+
+    .meals-information h1{
+        width: 250px;
         margin: 20px 0px;
     }
 
