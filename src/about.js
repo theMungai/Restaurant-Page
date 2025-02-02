@@ -5,7 +5,7 @@ aboutButton.addEventListener("click", () => {
     aboutPage()
 })
 
-function aboutPage(){
+export function aboutPage(){
     aboutContainer.innerHTML = ""
     let aboutHTML = `
         <div class="about-us-container">
