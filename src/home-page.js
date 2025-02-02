@@ -21,7 +21,6 @@ function homePage(){
     `;
 
     heroContainer.innerHTML = heroHTML
-
     document.querySelector(".hero-menu-btn").addEventListener("click", () => {
         
         menuPage()
