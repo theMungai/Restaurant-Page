@@ -27,5 +27,5 @@ function homePage(){
         menuPage()
     })
 }
-// homePage()
+homePage()
 
