@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root{
+    --orange : #ffbd00;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -31,7 +35,7 @@ body{
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: orange; 
+    background: var(--var(--orange)); 
 }
 
 ::-webkit-scrollbar-button {
@@ -48,7 +52,7 @@ body{
 /* ======================================== Header Section =================================== */
 
 header{
-    background-color: rgba(182, 181, 181, 0.651);
+    background-color: black;
     padding: 20px 0px;
     position: relative;
 }
@@ -69,9 +73,17 @@ header nav button{
     z-index: 1;
     border: none;
     background-color: inherit;
-    color: rgb(61, 61, 61);
+    color: var(--orange);
+    font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
 }
+
+header nav button:nth-child(1){
+    color: orange;
+}
+
+
 
 header nav span{
     position: absolute;
@@ -79,13 +91,17 @@ header nav span{
     width: 70px;
     position: absolute;
     left: 0%;
-    background-color: #ffffff;
+    background-color: var(--orange);
     border-radius: 6px;
-    transition: 0.8s;
+    transition: 0.4s;
 }
 
-nav button:nth-child(1):hover~span{
+nav button:nth-child(1):focus~span{
     left: 0%;
+}
+
+header nav button:focus{
+    color: black;
 }
 
 nav button:nth-child(2):focus~span{
@@ -93,11 +109,11 @@ nav button:nth-child(2):focus~span{
 }
 
 nav button:nth-child(3):focus~span{
-    left: 61.4%;
+    left: 61%;
 }
 
 nav button:nth-child(4):focus~span{
-    left: 91.8%;
+    left: 91%;
     width: 110px;
 }
 
@@ -137,8 +153,9 @@ nav button:nth-child(4):focus~span{
     transform: translate(-50%);
 }
 
-.hero-menu-btn{
-    background-color: orange;
+.hero-menu-btn,
+.submit-button{
+    background-color: var(--orange);
     color: black;
     padding: 15px 18px;
     margin: 30px auto;
@@ -152,12 +169,15 @@ nav button:nth-child(4):focus~span{
     cursor: pointer;
 }
 
-.hero-menu-btn img{
+.hero-menu-btn img,
+.submit-button img{
+    width: 20px;
     margin-left: 10px;
     transition: 0.6s;
 }
 
-.hero-menu-btn:hover{
+.hero-menu-btn:hover,
+.submit-button:hover{
     transform: scale(1.05);
     img{
         transform: translateX(15px);
@@ -195,7 +215,7 @@ nav button:nth-child(4):focus~span{
 }
 
 .menu-container .menu-header h1{
-    color: orange;
+    color: var(--orange);
     font-weight: 400;
     font-size: 4rem;
 }
@@ -203,7 +223,7 @@ nav button:nth-child(4):focus~span{
 .menu-sub-section .hotel-menu-header{
     margin: 40px 0px;
     text-align: center;
-    background-color: orange;
+    background-color: var(--orange);
     color: black;
 }
 
@@ -224,7 +244,7 @@ nav button:nth-child(4):focus~span{
 
 .name-of-the-meal,
 .meals-price{
-    color: orange;
+    color: var(--orange);
     font-size: 1.2rem;
     font-weight: 500;
 }
@@ -303,4 +323,117 @@ nav button:nth-child(4):focus~span{
 .about-us-container .about-us-passage p{
     line-height: 2;
     padding-bottom: 50px;
+}
+
+
+/* ===================== Contact Us Section ========================== */
+.contact-us-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    color: rgba(44, 44, 44, 0.863);
+    display: grid;
+    place-content: center;
+}
+
+.contact-us{
+    width: 60%;
+    margin: auto;
+}
+
+.contact-us h1{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-info-send-message-container{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 4rem;
+}
+
+.contact-info{
+    flex-basis: 48%;
+}
+
+.contact-info .feedback-passage{
+    line-height: 1.6;
+}
+
+.write-a-message{
+    flex-basis: 48%;
+}
+
+.send-us-message-heading{
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.send-us-message-heading .fa-solid{
+    color: var(--orange);
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.our-contacts{
+    margin: 30px 0px;
+}
+
+.our-contacts .fa-solid,
+.our-contacts .fa-regular{
+    font-size: 1.6rem;
+    color: #fb5607;
+}
+
+.our-contacts .contact-type{
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.write-a-message{
+    flex-basis: 48%;
+}
+
+.write-a-message form label{
+    /* display: block;
+    padding: 10px 0px; */
+}
+
+.write-a-message form input{
+    margin: 10px 0px;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 0.5px solid var(--orange);
+    outline: none;
+    border-radius: 6px;
+}
+
+.write-a-message form input:focus,
+.write-a-message form textarea:focus{
+    border: 0.5px solid #fb5607;
+    outline: 0.5px solid #fb5607;
+}
+
+.write-a-message form textarea{
+    display: block;
+    margin: 30px 0px;
+    width: 100%;
+    min-height: 150px;
+    padding: 12px;
+    resize: none;
+    font-size: 1rem;
+    border: 0.5px solid var(--orange);
+    outline: none;
+    border-radius: 6px;
+}
+
+.submit-button{
+    margin: 30px 0px;
 }
