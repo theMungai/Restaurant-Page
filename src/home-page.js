@@ -1,3 +1,4 @@
+import "./styles.css"
 import { menuPage } from "./menu.js";
 import { aboutPage } from "./about.js";
 import { contactPage } from "./contact.js";
