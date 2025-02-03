@@ -1,0 +1,1115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --orange : #ffbd00;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    /* outline: 2px solid red; */
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+/*====================== Styling Scrollbar for the whole page ======================*/
+::-webkit-scrollbar {
+    width: 8px;
+    height: 10%; 
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(180, 119, 6); 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--var(--orange)); 
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* ======================================= Main Container ====================================== */
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+}
+
+/* ======================================== Header Section =================================== */
+
+header{
+    background-color: black;
+    padding: 20px 0px;
+    position: relative;
+}
+
+header nav{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+header nav button{
+    margin: 0px ;
+    padding: 15px 20px;
+    z-index: 1;
+    border: none;
+    background-color: inherit;
+    color: var(--orange);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+header nav button:nth-child(1){
+    color: orange;
+}
+
+
+
+header nav span{
+    position: absolute;
+    height: 100%;
+    width: 150px;
+    position: absolute;
+    left: 0%;
+    background-color: var(--orange);
+    border-radius: 6px;
+    transition: 0.4s;
+}
+
+nav button:nth-child(1):focus~span{
+    left: 0%;
+}
+
+header nav button:focus{
+    color: black;
+}
+
+nav button:nth-child(2):focus~span{
+    left: 31%;
+}
+
+nav button:nth-child(3):focus~span{
+    left: 61%;
+}
+
+nav button:nth-child(4):focus~span{
+    left: 91%;
+    width: 110px;
+}
+
+/* ============================== Hero Page ======================================== */
+
+#content{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url(/src/images/hero.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.hero-text{
+    text-align: center;
+    color: #ffffff;
+    width: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text h1{
+    font-size: 3.5rem;
+}
+
+.hero-text p {
+    width: 70%;
+    text-align: center;
+    padding-top: 20px;
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.hero-menu-btn,
+.submit-button{
+    background-color: var(--orange);
+    color: black;
+    padding: 15px 18px;
+    margin: 30px auto;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.hero-menu-btn img,
+.submit-button img{
+    width: 20px;
+    margin-left: 10px;
+    transition: 0.6s;
+}
+
+.hero-menu-btn:hover,
+.submit-button:hover{
+    transform: scale(1.05);
+    img{
+        transform: translateX(15px);
+    }
+}
+
+/* ========================== Menu Section ==================================== */
+
+.menu-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    color: black;
+    padding:50px 100px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 3rem;
+}
+
+.menu-container .menu-sub-section{
+    height: auto;
+    background-color: black;
+    color: #ffffff;
+    flex-basis: 48%;
+    border-radius: 4px;
+    box-shadow: 20px 20px 20px rgba(0,0,0,0.4);
+    overflow: auto;
+    overflow-y: scroll;
+}
+
+
+.menu-container .menu-header{
+    display: grid;
+    place-content: center;
+}
+
+.menu-container .menu-header h1{
+    color: var(--orange);
+    font-weight: 400;
+    font-size: 4rem;
+}
+
+.menu-sub-section .hotel-menu-header{
+    margin: 40px 0px;
+    text-align: center;
+    background-color: var(--orange);
+    color: black;
+}
+
+/* Styling Scrollbar for the menu */
+.menu-sub-section::-webkit-scrollbar {
+    width: 4px;
+    height: 10%; 
+}
+
+
+.meals-information .meal-details-section{
+    margin: 40px 0px;
+}
+
+.name-of-the-meal{
+    padding-bottom: 20px;
+}
+
+.name-of-the-meal,
+.meals-price{
+    color: var(--orange);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.meal-details .meals-information{
+    flex-basis: 70%;
+}
+
+.menu-items .menu-meals{
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+    padding: 30px 20px;
+}
+
+.menu-meals .meal-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 70%;
+}
+
+.menu-meals .image-container{
+    flex-basis: 30%;
+}
+
+.menu-meals img{
+    width: 150px;
+}
+
+.meals-information h1{
+    width: 300px;
+    background-color: #ffffff;
+    color: black;
+    font-family: "Permanent Marker", serif;
+    font-weight: 400;
+    padding: 0px 20px;
+    margin: 30px 0px;
+}
+
+
+/* =============================== About Us ===================== */
+.about-us-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.about-us-container .about-heading-and-image{
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0.548), rgba(0, 0, 0, 0.548)),url(/src/images/Chefs\ At\ Work.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.about-us-container .about-heading-and-image h1{
+    font-size: 4rem;
+}
+
+.about-us-container .about-us-passage{
+    width: 60%;
+    margin: 80px auto;
+    color: rgba(44, 44, 44, 0.863);
+}
+
+.about-us-container .about-us-passage h1{
+    text-align: center;
+    font-size: 4rem;
+}
+
+.about-us-container .about-us-passage p{
+    line-height: 2;
+    padding-bottom: 50px;
+}
+
+
+/* ===================== Contact Us Section ========================== */
+.contact-us-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    color: rgba(44, 44, 44, 0.863);
+    display: grid;
+    place-content: center;
+}
+
+.contact-us{
+    width: 60%;
+    margin: auto;
+}
+
+.contact-us h1{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-info-send-message-container{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 4rem;
+}
+
+.contact-info{
+    flex-basis: 48%;
+}
+
+.contact-info .feedback-passage{
+    line-height: 1.6;
+}
+
+.write-a-message{
+    flex-basis: 48%;
+}
+
+.send-us-message-heading{
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.send-us-message-heading .fa-solid{
+    color: var(--orange);
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.our-contacts{
+    margin: 30px 0px;
+}
+
+.our-contacts .fa-solid,
+.our-contacts .fa-regular{
+    font-size: 1.6rem;
+    color: #fb5607;
+}
+
+.our-contacts .contact-type{
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.write-a-message{
+    flex-basis: 48%;
+}
+
+.write-a-message form label{
+    /* display: block;
+    padding: 10px 0px; */
+}
+
+.write-a-message form input{
+    margin: 10px 0px;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 0.5px solid var(--orange);
+    outline: none;
+    border-radius: 6px;
+}
+
+.write-a-message form input:focus,
+.write-a-message form textarea:focus{
+    border: 0.5px solid #fb5607;
+    outline: 0.5px solid #fb5607;
+}
+
+.write-a-message form textarea{
+    display: block;
+    margin: 30px 0px;
+    width: 100%;
+    min-height: 150px;
+    padding: 12px;
+    resize: none;
+    font-size: 1rem;
+    border: 0.5px solid var(--orange);
+    outline: none;
+    border-radius: 6px;
+}
+
+.submit-button{
+    margin: 30px 0px;
+}
+
+#result{
+    color: green;
+}
+
+
+/* ============================ Media Queries ========================== */
+/* ============================ Mobile Portrait ======================== */
+@media (max-width : 480px){
+    /* ======================================== Header Section =================================== */
+
+    header{
+        padding: 15px 10px;
+    }
+
+    header nav{
+        width: 100%;
+    }
+
+    header nav button{
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
+
+    header nav span{
+        border-radius: 5px;
+        width: 90px;
+    }
+
+    nav button:nth-child(2):focus~span{
+        left: 24%;
+    }
+
+    nav button:nth-child(3):focus~span{
+        left: 50%;
+    }
+
+    nav button:nth-child(4):focus~span{
+        left: 75%;
+    }
+
+    /* ============================== Hero Page ======================================== */
+    .hero-text{
+        width: 100%;
+    }
+
+    .hero-text h1{
+        font-size: 2.8rem;
+    }
+
+    .hero-text p {
+        width: 100%;
+        padding: 20px 30px;
+    }
+
+    /* ========================== Menu Section ==================================== */
+    .menu-container{
+        padding:20px 0px;
+        display: block;
+    }
+
+    .menu-container .menu-sub-section{
+        margin: 30px auto;
+        width: 95%;
+        border-radius: 4px;
+        box-shadow:none;
+    }
+
+    .menu-container .menu-header{
+        display: none;
+    }
+
+    .menu-sub-section .hotel-menu-header{
+        margin: 20px 0px;
+        font-size: 1.5rem;
+    }
+
+    .meals-information .meal-details-section{
+        margin: 40px 0px;
+    }
+
+    .name-of-the-meal,
+    .meals-price{
+        font-size: 1.1rem;
+    }
+
+    .meal-details .meals-information{
+        flex-basis: 80%;
+    }
+
+    .menu-items .menu-meals{
+        display: block;
+        padding: 30px 20px;
+    }
+
+    .menu-meals .meal-details{
+        display: block;
+        width: 100%;
+    }
+
+    .menu-meals .image-container{
+        width: 200px;
+    }
+
+    .menu-meals img{
+        width: 60%;
+    }
+
+    .meals-information h1{
+        width: 250px;
+        margin: 20px 0px;
+    }
+
+
+    /* =============================== About Us ===================== */
+    .about-us-container .about-heading-and-image{
+        height: 30%;        
+    }
+
+    .about-us-container .about-heading-and-image h1{
+        font-size: 2rem;
+    }
+
+    .about-us-container .about-us-passage{
+        width: 100%;
+        padding: 20px;
+        margin: 50px auto;
+    }
+
+    .about-us-container .about-us-passage h1{
+        font-size: 2rem;
+    }
+
+    .about-us-container .about-us-passage p{
+        font-size: 0.95rem;
+        line-height: 1.6;
+        padding-bottom: 50px;
+    }
+
+
+    /* ===================== Contact Us Section ========================== */
+    .contact-us-container{
+        display: block;
+        padding: 20px;
+        height: auto;
+    }
+
+    .contact-us{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        margin: 60px 0px;
+    }
+
+    .contact-us h1{
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-info-send-message-container{
+        display: block;
+    }
+
+
+    .send-us-message-heading{
+        font-size: 1.1rem;
+    }
+
+    .our-contacts .contact-type{
+        column-gap: 1rem;
+    }
+
+    .write-a-message form textarea{
+        min-height: 100px;
+    }
+}
+
+
+/* ============================ Mobile Landscape ======================== */
+@media (min-width : 481px) and (max-width : 767px){
+    /* ======================================== Header Section =================================== */
+
+    header{
+        padding: 15px 10px;
+    }
+
+    header nav{
+        width: 100%;
+    }
+
+    header nav button{
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
+
+    header nav span{
+        border-radius: 5px;
+        width: 90px;
+    }
+
+    nav button:nth-child(2):focus~span{
+        left: 25%;
+    }
+
+    nav button:nth-child(3):focus~span{
+        left: 55%;
+    }
+
+    nav button:nth-child(4):focus~span{
+        left: 85%;
+    }
+
+    /* ============================== Hero Page ======================================== */
+    .hero-text{
+        width: 100%;
+    }
+
+    .hero-text h1{
+        font-size: 2.8rem;
+    }
+
+    .hero-text p {
+        width: 100%;
+        padding: 20px 30px;
+    }
+
+    /* ========================== Menu Section ==================================== */
+    .menu-container{
+        padding:20px 0px;
+        display: block;
+    }
+
+    .menu-container .menu-sub-section{
+        margin: 30px auto;
+        width: 95%;
+        border-radius: 4px;
+        box-shadow:none;
+    }
+
+    .menu-container .menu-header{
+        display: none;
+    }
+
+    .menu-sub-section .hotel-menu-header{
+        margin: 20px 0px;
+        font-size: 1.5rem;
+    }
+
+    .meals-information .meal-details-section{
+        margin: 40px 0px;
+    }
+
+    .name-of-the-meal,
+    .meals-price{
+        font-size: 1.1rem;
+    }
+
+    .meal-details .meals-information{
+        flex-basis: 80%;
+    }
+
+    .menu-items .menu-meals{
+        display: block;
+        padding: 30px 20px;
+    }
+
+    .menu-meals .meal-details{
+        display: block;
+        width: 100%;
+    }
+
+    .menu-meals .image-container{
+        width: 200px;
+    }
+
+    .menu-meals img{
+        width: 60%;
+    }
+
+    .meals-information h1{
+        width: 250px;
+        margin: 20px 0px;
+    }
+
+
+    /* =============================== About Us ===================== */
+    .about-us-container .about-heading-and-image{
+        height: 30%;        
+    }
+
+    .about-us-container .about-heading-and-image h1{
+        font-size: 2rem;
+    }
+
+    .about-us-container .about-us-passage{
+        width: 100%;
+        padding: 20px;
+        margin: 50px auto;
+    }
+
+    .about-us-container .about-us-passage h1{
+        font-size: 2rem;
+    }
+
+    .about-us-container .about-us-passage p{
+        font-size: 0.95rem;
+        line-height: 1.6;
+        padding-bottom: 50px;
+    }
+
+
+    /* ===================== Contact Us Section ========================== */
+    .contact-us-container{
+        display: block;
+        padding: 20px;
+        height: auto;
+    }
+
+    .contact-us{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        margin: 60px 0px;
+    }
+
+    .contact-us h1{
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-info-send-message-container{
+        display: block;
+    }
+
+
+    .send-us-message-heading{
+        font-size: 1.1rem;
+    }
+
+    .our-contacts .contact-type{
+        column-gap: 1rem;
+    }
+
+    .write-a-message form textarea{
+        min-height: 100px;
+    }
+}
+
+/* ============================ Tablet Portrait ======================== */
+@media (min-width : 768px) and (max-width : 991px){
+    /* ======================================== Header Section =================================== */
+
+    header{
+        padding: 15px 10px;
+    }
+
+    header nav{
+        width: 100%;
+    }
+
+    header nav button{
+        padding: 15px 22px;
+        font-size: 1rem;
+    }
+
+    header nav span{
+        border-radius: 5px;
+        width: 110px;
+    }
+
+    nav button:nth-child(2):focus~span{
+        left: 28%;
+    }
+
+    nav button:nth-child(3):focus~span{
+        left: 58%;
+    }
+
+    nav button:nth-child(4):focus~span{
+        left: 88%;
+    }
+
+    /* ============================== Hero Page ======================================== */
+    .hero-text{
+        width: 100%;
+    }
+
+    .hero-text h1{
+        font-size: 2.8rem;
+    }
+
+    .hero-text p {
+        width: 100%;
+        padding: 20px 30px;
+    }
+
+    /* ========================== Menu Section ==================================== */
+    .menu-container{
+        padding:20px 0px;
+        display: block;
+    }
+
+    .menu-container .menu-sub-section{
+        margin: 30px auto;
+        width:80%;
+        border-radius: 4px;
+        box-shadow:none;
+        overflow: hidden;
+    }
+
+    .menu-container .menu-header{
+        display: none;
+    }
+
+    .menu-sub-section .hotel-menu-header{
+        padding: 20px;
+        margin: 20px 0px;
+        font-size: 2rem;
+    }
+
+    .meals-information .meal-details-section{
+        margin: 40px 0px;
+    }
+
+    .name-of-the-meal,
+    .meals-price{
+        font-size: 1.1rem;
+    }
+
+    .meal-details .meals-information{
+        flex-basis: 80%;
+    }
+
+    .menu-items .menu-meals{
+        display: block;
+        padding: 30px 20px;
+    }
+
+    .menu-meals .meal-details{
+        display: block;
+        width: 100%;
+    }
+
+    .menu-meals .image-container{
+        width: 200px;
+    }
+
+    .menu-meals img{
+        width: 60%;
+    }
+
+    .meals-information h1{
+        width: 250px;
+        margin: 20px 0px;
+    }
+
+
+    /* =============================== About Us ===================== */
+    .about-us-container .about-heading-and-image{
+        height: 40%;        
+    }
+
+    .about-us-container .about-heading-and-image h1{
+        font-size: 3rem;
+    }
+
+    .about-us-container .about-us-passage{
+        width: 80%;
+        padding: 20px;
+        margin: 50px auto;
+    }
+
+    .about-us-container .about-us-passage h1{
+        font-size: 3rem;
+    }
+
+    .about-us-container .about-us-passage p{
+        font-size: 1rem;
+        line-height: 1.8;
+        padding-bottom: 50px;
+    }
+
+
+    /* ===================== Contact Us Section ========================== */
+    .contact-us-container{
+        display: block;
+        padding: 20px;
+        height: auto;
+    }
+
+    .contact-us{
+        width: 80%;
+        height: auto;
+        margin: 60px auto;
+    }
+
+    .contact-us h1{
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-info-send-message-container{
+        display: block;
+    }
+
+
+    .send-us-message-heading{
+        font-size: 1.1rem;
+    }
+
+    .our-contacts .contact-type{
+        column-gap: 1rem;
+    }
+
+    .write-a-message form textarea{
+        min-height: 100px;
+    }
+}
+
+
+/* ============================ Tablet Landscape ======================== */
+@media (min-width : 992px) and (max-width : 1399px){
+/* ======================================== Header Section =================================== */
+
+    header nav span{
+        width: 110px;
+    }
+
+    nav button:nth-child(2):focus~span{
+        left: 29%;
+    }
+
+    nav button:nth-child(3):focus~span{
+        left:59%;
+    }
+
+    nav button:nth-child(4):focus~span{
+        left: 89%;
+    }
+
+    /* ============================== Hero Page ======================================== */
+    .hero-text{
+        width: 100%;
+    }
+
+    .hero-text h1{
+        font-size: 3.5rem;
+    }
+
+    .hero-text p {
+        width: 80%;
+        padding: 20px 30px;
+    }
+
+    /* ========================== Menu Section ==================================== */
+    .menu-container{
+        padding:20px 0px;
+        display: block;
+    }
+
+    .menu-container .menu-sub-section{
+        margin: 30px auto;
+        width:80%;
+        border-radius: 4px;
+        box-shadow:none;
+        overflow: hidden;
+    }
+
+    .menu-container .menu-header{
+        display: none;
+    }
+
+    .menu-sub-section .hotel-menu-header{
+        padding: 20px;
+        margin: 20px 0px;
+        font-size: 2rem;
+    }
+
+    .meals-information .meal-details-section{
+        margin: 40px 0px;
+    }
+
+    .name-of-the-meal,
+    .meals-price{
+        font-size: 1.1rem;
+    }
+
+    .meal-details .meals-information{
+        flex-basis: 80%;
+    }
+
+    .menu-items .menu-meals{
+        display: block;
+        padding: 30px 20px;
+    }
+
+    .menu-meals .meal-details{
+        display: block;
+        width: 100%;
+    }
+
+    .menu-meals .image-container{
+        width: 200px;
+    }
+
+    .menu-meals img{
+        width: 60%;
+    }
+
+    .meals-information h1{
+        width: 250px;
+        margin: 20px 0px;
+    }
+
+
+    /* =============================== About Us ===================== */
+    .about-us-container .about-heading-and-image{
+        height: 40%;        
+    }
+
+    .about-us-container .about-heading-and-image h1{
+        font-size: 3rem;
+    }
+
+    .about-us-container .about-us-passage{
+        width: 80%;
+        padding: 20px;
+        margin: 50px auto;
+    }
+
+    .about-us-container .about-us-passage h1{
+        font-size: 3rem;
+    }
+
+    .about-us-container .about-us-passage p{
+        font-size: 1rem;
+        line-height: 1.8;
+        padding-bottom: 50px;
+    }
+
+
+    /* ===================== Contact Us Section ========================== */
+    .contact-us-container{
+        display: block;
+        padding: 20px;
+        height: auto;
+    }
+
+    .contact-us{
+        width: 80%;
+        height: auto;
+        margin: 60px auto;
+    }
+
+    .contact-us h1{
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-info-send-message-container{
+        display: block;
+    }
+
+
+    .send-us-message-heading{
+        font-size: 1.1rem;
+    }
+
+    .our-contacts .contact-type{
+        column-gap: 1rem;
+    }
+
+    .write-a-message form textarea{
+        min-height: 100px;
+    }
+}
